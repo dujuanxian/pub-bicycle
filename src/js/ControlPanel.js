@@ -1,14 +1,18 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var _ = require('lodash');
 
 var ControlPanel = React.createClass({
     handleSearch: function(e) {
         e.preventDefault();
         var term = React.findDOMNode(this.refs.term).value.trim();
+        if (_.isEmpty(term)) {
+            this.locationSearch();
+        }
         this.props.onFetchStations({"term":term});
     },
-    locationSearch: function(e) {
+    locationSearch: function() {
         navigator.geolocation.getCurrentPosition(function(position) {
             this.props.onFetchStations({"lat": position.coords.latitude, "lng": position.coords.longitude});
         }.bind(this));
@@ -17,10 +21,9 @@ var ControlPanel = React.createClass({
         return (
             <section className="controlPanel">
                 <form className="searchForm" onSubmit={this.handleSearch}>
-                    <input className="searchBox" type="text" placeholder="Street name or Landmark" ref="term"/>
+                    <input className="searchBox icon-location" type="text" placeholder="Current Location" ref="term"/>
                     <button className="icon-search searchButton" type="submit"/>
                 </form>
-                <button className="icon-location locationButton" onClick={this.locationSearch}/>
             </section>
         );
     }
