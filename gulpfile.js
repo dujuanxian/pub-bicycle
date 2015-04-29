@@ -1,18 +1,17 @@
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
-var concat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
 var del = require('del');
-var shell = require('gulp-shell');
 var minifyCss = require('gulp-minify-css');
 var webserver = require('gulp-webserver');
+var uglify = require('gulp-uglify');
 
 gulp.task('browserify', function(){
     gulp.src('src/js/app.js')
         .pipe(browserify({
             transform: 'reactify'
         }))
-        .pipe(concat('app.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -21,7 +20,6 @@ gulp.task('sass', function () {
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
-        .pipe(concat('app.css'))
         .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'));
 });
