@@ -1,0 +1,40 @@
+@import "fontello";
+
+.appContainer {
+  .controlPanel {
+    height: 40px;
+
+    .searchBox {
+      float: left;
+      height: 100%;
+      width: 80%;
+      border: 2px solid #999;
+      border-right: 0px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      padding-left: 16px;
+      font-size: 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .searchButton {
+      height: 100%;
+      width: 20%;
+      float: left;
+      border: 2px solid #999;
+      border-left: 0px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      font-size: 20px;
+    }
+  }
+
+  .stationList {
+    .station {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
