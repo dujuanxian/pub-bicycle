@@ -36,10 +36,10 @@ gulp.task('html', function() {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['browserify', 'font', 'sass', 'html', 'serve', 'watch']);
+gulp.task('default', ['clean', 'browserify', 'font', 'sass', 'html', 'serve', 'watch']);
 
-gulp.task('clean', function (cb) {
-    cb(del.sync(['dist/*']));
+gulp.task('clean', function () {
+    del.sync(['dist/*']);
 });
 
 gulp.task('watch', function() {
