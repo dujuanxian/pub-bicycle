@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var del = require('del');
 var minifyCss = require('gulp-minify-css');
 var webserver = require('gulp-webserver');
@@ -16,7 +16,8 @@ gulp.task('browserify', function(){
 });
 
 gulp.task('sass', function () {
-    return sass('src/css/app.scss')
+    gulp.src('src/css/app.scss')
+        .pipe(sass())
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
