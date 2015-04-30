@@ -19,12 +19,12 @@ var ControlPanel = React.createClass({
     },
     render: function () {
         return (
-            <section className="controlPanel">
+            <header>
                 <form className="searchForm" onSubmit={this.handleSearch}>
                     <input className="searchBox icon-location" type="text" placeholder="Current Location" ref="term"/>
                     <button className="icon-search searchButton" type="submit"/>
                 </form>
-            </section>
+            </header>
         );
     }
 });
