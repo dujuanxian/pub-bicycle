@@ -2,8 +2,6 @@
 
 var React = require('react');
 var SearchForm = require('./SearchForm');
-var LocationButton = require('./LocationButton');
-var BookmarkButton = require('./BookmarkButton');
 
 var ControlPanel = React.createClass({
     locationSearch: function(e) {
@@ -16,11 +14,7 @@ var ControlPanel = React.createClass({
     },
     render: function () {
         return (
-            <section className="controlPanel">
-                <SearchForm onFetchStations={this.props.onFetchStations} />
-                <LocationButton onFetchStations={this.props.onFetchStations} />
-                <BookmarkButton onFetchStations={this.props.onFetchStations} />
-            </section>
+            <SearchForm onFetchStations={this.props.onFetchStations} />
         );
     }
 });

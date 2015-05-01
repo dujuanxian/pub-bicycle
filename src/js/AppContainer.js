@@ -4,6 +4,7 @@ var React = require('react');
 var $ = require('jquery');
 var ControlPanel = require('./control_panel/ControlPanel');
 var StationList = require('./station_list/StationList');
+var BookmarkButton = require('./control_panel/BookmarkButton');
 
 var AppContainer = React.createClass({
     fetchStations: function(query) {
@@ -21,6 +22,12 @@ var AppContainer = React.createClass({
     render: function () {
         return (
             <div className="appContainer">
+                <header className="controlPanel">
+                    <h1>Pub Bycicle</h1>
+                    <nav>
+                        <BookmarkButton onFetchStations={this.props.onFetchStations} />
+                    </nav>
+                </header>
                 <ControlPanel onFetchStations={this.fetchStations} />
                 <StationList data={this.state.data}/>
             </div>
