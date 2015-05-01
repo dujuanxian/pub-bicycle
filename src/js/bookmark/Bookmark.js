@@ -10,7 +10,7 @@ var Bookmark = React.createClass({
         return (
             <header>
                 <h1>Pub Bycicle</h1>
-                <i className="icon-star-1 bookmark" onClick={this.idsSearch}/>
+                <i className="icon-star bookmark" onClick={this.idsSearch}/>
             </header>
         );
     }
