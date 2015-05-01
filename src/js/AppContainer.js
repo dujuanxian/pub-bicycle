@@ -2,7 +2,7 @@
 
 var React = require('react');
 var $ = require('jquery');
-var ControlPanel = require('./control_panel/ControlPanel');
+var SearchForm = require('./search_form/SearchForm');
 var StationList = require('./station_list/StationList');
 var Bookmark = require('./bookmark/Bookmark');
 
@@ -23,7 +23,7 @@ var AppContainer = React.createClass({
         return (
             <div className="appContainer">
                 <Bookmark onFetchStations={this.props.onFetchStations} />
-                <ControlPanel onFetchStations={this.fetchStations} />
+                <SearchForm onFetchStations={this.fetchStations} />
                 <StationList data={this.state.data}/>
             </div>
         );

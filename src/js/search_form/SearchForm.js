@@ -13,8 +13,10 @@ var SearchForm = React.createClass({
         return (
             <form className="searchForm" onSubmit={this.keywordSearch}>
                 <input className="searchBox" type="text" placeholder="Street name or Landmark" ref="term"/>
-                <button className="icon-search searchButton" type="submit"/>
-                <LocationButton onFetchStations={this.props.onFetchStations} />
+                <div className="buttons">
+                    <button className="icon-search searchButton" type="submit"/>
+                    <LocationButton onFetchStations={this.props.onFetchStations} />
+                </div>
             </form>
         );
     }
