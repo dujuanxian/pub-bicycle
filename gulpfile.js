@@ -43,7 +43,7 @@ gulp.task('clean', function () {
 
 gulp.task('watch', function() {
     gulp.watch('src/css/*.*', ['sass']);
-    gulp.watch('src/js/*.*', ['browserify']);
+    gulp.watch('src/js/**/*.*', ['browserify']);
     gulp.watch('src/index.html', ['html']);
 });
 
