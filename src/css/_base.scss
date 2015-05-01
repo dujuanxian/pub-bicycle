@@ -1,0 +1,15 @@
+$icon-size: 20px;
+$font-size: 16px;
+$panel-height: 40px;
+$radius: 20px;
+$station-height: 110px;
+$dark: #999;
+$light: #ddd;
+
+@media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  $icon-size: 40px;
+  $font-size: 32px;
+  $panel-height: 80px;
+  $radius: 40px;
+  $station-height: 180px;
+}

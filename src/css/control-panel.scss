@@ -1,39 +1,104 @@
-header {
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  top: 0;
-  left: 0;
+.controlPanel {
+  height: $panel-height;
 
-  .searchForm {
-    height: 40px;
-    margin: 20px;
+  .searchBox {
+    float: left;
+    height: 100%;
+    width: 55%;
+    border: 2px solid $dark;
+    border-right: 0px;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    padding-left: 16px;
+    font-size: $font-size;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .searchButton {
+    height: 100%;
+    width: 15%;
+    float: left;
+    border: 2px solid $dark;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    font-size: inherit;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background: $light;
+      color: $dark;
+    }
+  }
+
+  .locationButton {
+    height: 100%;
+    width: 15%;
+    border-top-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border: 2px solid $dark;
+    border-right: 1px solid $dark;
+    font-size: inherit;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background: $light;
+      color: $dark;
+    }
+  }
+
+  .bookmarkButton {
+    height: 100%;
+    width: 15%;
+    border-top-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    border: 2px solid $dark;
+    border-left: 1px solid $dark;
+    font-size: inherit;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      background: $light;
+      color: $dark;
+    }
+  }
+}
+
+@media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  .controlPanel {
+    height: $panel-height;
 
     .searchBox {
-      float: left;
-      height: 100%;
-      width: 80%;
-      border: 2px solid #999;
-      border-right: 0px;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-      padding-left: 16px;
-      font-size: 20px;
-
-      &:focus {
-        outline: none;
-      }
+      font-size: $font-size;
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+      padding-left: 30px;
     }
 
     .searchButton {
-      height: 100%;
-      width: 20%;
-      float: left;
-      border: 2px solid #999;
-      border-left: 0px;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
-      font-size: 20px;
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
+    }
+
+    .locationButton {
+      border-top-left-radius: $radius;
+      border-bottom-left-radius: $radius;
+    }
+
+    .bookmarkButton {
+      border-top-right-radius: $radius;
+      border-bottom-right-radius: $radius;
     }
   }
 }
