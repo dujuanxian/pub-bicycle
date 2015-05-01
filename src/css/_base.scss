@@ -2,18 +2,19 @@ $icon-size: 20px;
 $font-size: 16px;
 $panel-height: 60px;
 $radius: 20px;
-$station-height: 110px;
+$station-height: 70px;
 $header-height: 60px;
+$content-width: 70%;
 $dark: #2F303D;
 $light: #ddd;
 $font-color: #333;
-$light-orange-color: #FF9525;
-$dark-orange-color: #F27E1F;
-$light-green-color: #ACF27C;
+$light-orange-color: #FA9820;
+$dark-orange-color: #EA8100;
+$light-green-color: #96C942;
 $dark-green-color: #6FA534;
+$light-box-color: rgba(190, 230, 150, 0.2);
 
 @media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
   $icon-size: 40px;
   $radius: 40px;
-  $station-height: 180px;
 }

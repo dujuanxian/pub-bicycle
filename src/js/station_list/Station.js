@@ -45,9 +45,7 @@ var Station = React.createClass({
                     <p>{this.props.info.location}</p>
                 </section>
                 <section className="action">
-                    <div className="navi">
-                        <a className="icon-direction" href={naviLink}/>
-                    </div>
+                    <a className="navi icon-direction" href={naviLink}/>
                     <button className={classes} onClick={this.bookmark}/>
                 </section>
             </article>

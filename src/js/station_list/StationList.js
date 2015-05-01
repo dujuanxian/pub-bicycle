@@ -12,7 +12,9 @@ var StationList = React.createClass({
         });
         return (
             <section className="stationList">
+                <div className="stationListContainer">
                 {stationList}
+                </div>
             </section>
         );
     }

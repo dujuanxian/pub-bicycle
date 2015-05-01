@@ -1,6 +1,7 @@
 header {
   height: $header-height;
-  background-color: $dark;
+  background-color: rgba(250, 152, 32, 0.9);
+  z-index: 1000;
   position: fixed;
   width: 100%;
   padding: 0 20px;
@@ -9,7 +10,7 @@ header {
   h1 {
     font-size: 28px;
     font-weight: lighter;
-    color: white;
+    color: $dark;
     margin: 0;
     line-height: $header-height;
   }
@@ -18,11 +19,13 @@ header {
     position: absolute;
     right: 20px;
     top: 0;
-    color: $dark-orange-color;
+    color: white;
     cursor: pointer;
 
+
     &:hover {
-      color: $light-orange-color;
+      text-shadow: 1px 1px 4px #ccc;
+      top: -2px;
     }
   }
   [class*=" icon-"]:before, [class^=icon-]:before {

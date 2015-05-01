@@ -23,8 +23,10 @@ var AppContainer = React.createClass({
         return (
             <div className="appContainer">
                 <Bookmark onFetchStations={this.props.onFetchStations} />
-                <SearchForm onFetchStations={this.fetchStations} />
-                <StationList data={this.state.data}/>
+                <div className="searchContainer">
+                    <SearchForm onFetchStations={this.fetchStations} />
+                    <StationList data={this.state.data}/>
+                </div>
             </div>
         );
     }

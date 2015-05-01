@@ -1,17 +1,15 @@
 .searchForm {
-  margin: 0 auto;
-  margin-top: $header-height + 20px;
+  margin: $header-height+80px auto 0;
   height: $panel-height;
-  width: 70%;
+  width: $content-width;
   position: relative;
 
   .searchBox {
     height: 100%;
     width: 100%;
-    border: 3px solid $dark-green-color;
+    border: 3px solid $light-green-color;
     padding-left: 16px;
     font-size: $font-size;
-    border-radius: 8px;
 
     &:focus {
       outline: none;
@@ -23,36 +21,29 @@
     right: 0;
     top: 0;
     height: $panel-height;
+    background-color: $light-green-color;
 
     button {
+      width: $panel-height;
+      height: 100%;
       border: none;
       background: none;
       font-size: 24px;
       color: $dark;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        font-size: 30px;
+      }
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .searchButton {
-      height: 100%;
-
-      &:focus {
-        outline: none;
-      }
-
-      &:active {
-        background: $light;
-      }
-    }
-
-    .locationButton {
-
-      &:focus {
-        outline: none;
-      }
-
-      &:active {
-        background: $light;
-        color: $dark;
-      }
+      background-color: rgba(255,255,255,.2);
     }
   }
 
@@ -67,18 +58,6 @@
       border-top-left-radius: $radius;
       border-bottom-left-radius: $radius;
       padding-left: 30px;
-    }
-
-    .buttons {
-      .searchButton {
-        border-top-right-radius: $radius;
-        border-bottom-right-radius: $radius;
-      }
-
-      .locationButton {
-        border-top-left-radius: $radius;
-        border-bottom-left-radius: $radius;
-      }
     }
   }
 }
