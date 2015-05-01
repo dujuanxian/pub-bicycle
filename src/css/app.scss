@@ -26,6 +26,10 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
   .appContainer {
     width: 100%;

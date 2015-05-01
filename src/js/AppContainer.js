@@ -12,19 +12,22 @@ var AppContainer = React.createClass({
             url: 'https://xian-pub-bicycle.herokuapp.com/api?query=' + encodeURI(JSON.stringify(query)),
             dataType: 'json',
             success: function(data) {
-                this.setState({data: data});
+                this.setState({
+                    data: data,
+                    hasLoaded: true
+                });
             }.bind(this)
         });
     },
     getInitialState: function() {
-        return {data: []};
+        return {data: [], hasLoaded: false};
     },
     render: function () {
         return (
             <div className="appContainer">
                 <Bookmark onFetchStations={this.props.onFetchStations} />
                 <div className="searchContainer">
-                    <SearchForm onFetchStations={this.fetchStations} />
+                    <SearchForm onFetchStations={this.fetchStations} hasLoaded={this.state.hasLoaded}/>
                     <StationList data={this.state.data}/>
                 </div>
             </div>
