@@ -1,11 +1,18 @@
 @import "base";
 @import "fontello";
+@import "bookmark";
 @import "control-panel";
 @import "station-list";
 
+
+body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  font-size: $font-size;
+  margin: 0;
+  padding: 0;
+  color: $font-color;
+}
 .appContainer {
-  width: 900px;
-  margin: auto;
   font-size: $icon-size;
 }
 

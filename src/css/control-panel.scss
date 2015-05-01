@@ -54,25 +54,6 @@
       color: $dark;
     }
   }
-
-  .bookmarkButton {
-    height: 100%;
-    width: 15%;
-    border-top-right-radius: $radius;
-    border-bottom-right-radius: $radius;
-    border: 2px solid $dark;
-    border-left: 1px solid $dark;
-    font-size: inherit;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      background: $light;
-      color: $dark;
-    }
-  }
 }
 
 @media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -94,11 +75,6 @@
     .locationButton {
       border-top-left-radius: $radius;
       border-bottom-left-radius: $radius;
-    }
-
-    .bookmarkButton {
-      border-top-right-radius: $radius;
-      border-bottom-right-radius: $radius;
     }
   }
 }
