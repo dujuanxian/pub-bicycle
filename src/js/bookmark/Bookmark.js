@@ -7,6 +7,10 @@ var Bookmark = React.createClass({
         this.props.onFetchStations({"ids": localStorage["bookmarks"]});
     },
     render: function () {
+        if(localStorage["bookmarks"] === undefined) {
+            localStorage["bookmarks"] = JSON.stringify([]);
+        }
+
         return (
             <header>
                 <h1>Pub Bycicle</h1>
