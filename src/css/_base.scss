@@ -17,8 +17,3 @@ $dark-orange-color: #EA8100;
 $light-green-color: #96C942;
 $dark-green-color: #6FA534;
 $light-box-color: rgba(190, 230, 150, 0.2);
-
-@media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
-  $icon-size: 40px;
-  $radius: 40px;
-}
