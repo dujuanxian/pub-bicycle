@@ -7,7 +7,7 @@ var StationList = React.createClass({
     render: function () {
         var stationList = this.props.data.map(function (station) {
             return (
-                <Station info={station} />
+                <Station key={station.siteid} info={station} />
             );
         });
         return (
